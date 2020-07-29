@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(52, 58, 64);
+}
+
+body nav a{
+    font-size: 20px;
+}
+
+.container-fluid{
+    margin-top: 20px;
+}
+
+h1{
+    color: white;
+}
+
+.customcontainer{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+hr{
+    background-color: white;
+}
+
+a{
+    color: red;
+}
+
+a:hover{
+    color: pink;
+}
