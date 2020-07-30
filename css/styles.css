@@ -30,3 +30,7 @@ a{
 a:hover{
     color: pink;
 }
+
+.modalstyle{
+    margin-bottom: 25px;
+}

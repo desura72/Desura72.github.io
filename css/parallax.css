@@ -1,0 +1,62 @@
+.parallax1{
+    /* The Image Used */
+    background-image: url(/assets/images/tsushima.jpg);
+    /* Sets the specific height */
+    min-height: 750px;
+    max-height: 900px;
+    /* Creates the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2{
+    /* The Image Used */
+    background-image: url(/assets/images/tsushima2.jpg);
+    /* Sets the specific height */
+    min-height: 750px;
+    max-height: 900px;
+    /* Creates the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Creating some margin for the footer to have room */
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.parallax3{
+    /* The Image Used */
+    background-image: url(/assets/images/tsushima3.jpg);
+    /* Sets the specific height */
+    min-height: 750px;
+    max-height: 900px;
+    /* Creates the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallaxtext1{
+    color: black;
+    padding-top: 25px;
+    font-size: 64px;
+}
+
+.parallaxtext2{
+    color: white;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+
+.parallax2 span{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -50%;
+    
+}
