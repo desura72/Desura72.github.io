@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- My Personal CSS Link -->
     <link rel="stylesheet" href="css/styles.css"/>
-    <link rel="stylesheet" href="css/parallax.css"/>
+    <link rel="stylesheet" href="css/calcstyles.css"/>
     <!-- Logo / Icons Import -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
@@ -22,7 +22,7 @@
   </head>
 
 
-  <body onload="updateClock(); setInterval('updateClock()', 1000)">
+  <body>
 
     <!--This is the NAVIGATION BAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -39,7 +39,7 @@
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Me  <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="about.html">About Me</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://github.com/desura72/desura72.github.io" target="_blank">Github</a>
@@ -49,10 +49,10 @@
                     Project List
                     </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item active" href="parallax.html">Parallax</a>
+                    <a class="dropdown-item" href="parallax.html">Parallax</a>
                     <a class="dropdown-item" href="largeclock.html">Large Clock</a>
                     <a class="dropdown-item" href="countdown.html">Countdown Timer</a>
-                    <a class="dropdown-item" href="calculator.html">Addition/Subtraction/Percentage Calculator</a>
+                    <a class="dropdown-item active" href="calculator.html">Addition/Subtraction/Percentage Calculator  <span class="sr-only">(current)</a>
                 </div>
                 </li>
             </ul>
@@ -60,19 +60,35 @@
     </nav>
     <!-- This is the END of the Navigation Bar-->
 
-    <!--This is the beginning of the main container, containing the parallax images, headers and paragraphs, tables, etc -->
+    <!--This is the beginning of the main container, containing headers and paragraphs, tables, etc -->
 
-
-    <div class="container-fluid parallax1">
-        <h1 class="parallaxtext1 text-center">Welcome to my Parallax Project!</h1>
-        <h2 class="text-center">This was a lot of fun to work on and really easy to pick up!</h2>
+    <div class="container-fluid">
+        <div class="container calculatorcontainer text-center">
+            <button type="button" class="btn btn-primary" id="onehundred">+ 100</button>
+            <button type="button" class="btn btn-primary" id="fivehundred">+ 500</button>
+            <button type="button" class="btn btn-primary" id="onethousand">+ 1000</button>
+            <button type="button" class="btn btn-primary" id="twothousand">+ 2000</button>
+            <button type="button" class="btn btn-primary" id="fivethousand">+ 5000</button>
+            <button type="button" class="btn btn-primary" id="tenthousand">+ 10000</button>
+            <br><br>
+            <button type="button" class="btn btn-danger" id="minusonehundred">- 100</button>
+            <button type="button" class="btn btn-danger" id="minusfivehundred">- 500</button>
+            <button type="button" class="btn btn-danger" id="minusonethousand">- 1000</button>
+            <button type="button" class="btn btn-danger" id="minustwothousand">- 2000</button>
+            <button type="button" class="btn btn-danger" id="minusfivethousand">- 5000</button>
+            <button type="button" class="btn btn-danger" id="minustenthousand">- 10000</button>
+            <br><br>
+            <button type="button" class="btn btn-danger" id="minustenpercent">-10%</button>
+            <button type="button" class="btn btn-primary" id="plustenpercent">+10%</button>
+            <br><br>
+            <input id="final" type="text"/>
+            
+            <br><br>
+            <button type="button" class="btn btn-warning" id="reset">Reset</button>
+        </div>
+        <br>
     </div>
 
-    <div class="container-fluid parallax3"></div>
-
-    <div class="container-fluid parallax2">
-        <span><h2 class="parallaxtext2">The images used in this project are from a video game named "Ghosts of Tsushima"</h2></span>
-    </div>
 
     <div class="container text-center text-muted">
         <p>Please consider taking the survey below so that I can get feedback on what to do better, right, or next.</p>
@@ -121,14 +137,14 @@
     <div class="container">
         <p class="text-light text-center" id="clock">Loading Time...</p>
         
-        <p class="text-light text-center" id="year">Loading Year</p>
+        <p class="text-light text-center" id="year">Loading Date...</p>
     </div>
 
 
-
-    <!-- My Personal Javascript -->
+    <!-- My personal javascript -->
     <script src="js/currenttime.js"></script>
     <script src="js/currentyear.js"></script>
+    <script src="js/additionbuttons.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
