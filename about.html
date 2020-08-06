@@ -49,9 +49,8 @@
                     </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="parallax.html">Parallax</a>
-                    <a class="dropdown-item" href="#">Coming Soon!</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Coming Soon!</a>
+                    <a class="dropdown-item" href="largeclock.html">Large Clock</a>
+                    <a class="dropdown-item" href="countdown.html">Countdown Timer</a>
                 </div>
                 </li>
             </ul>
@@ -64,7 +63,7 @@
     <div class="container-fluid">
         <h1 class="text-center">
             About me! <br>
-            <small class="font-weight-light">I'm a 23 year old web dev student on the journey to becoming a successful full stack developer.
+            <small class="font-weight-light">Hey! My name's Garry (Some people call me Garrett).<br>I'm a 23 year old web dev student on the journey to becoming a successful full stack developer.
             <br>
             I enjoy gaming as a hobby, and doing various client-side scripting activities with some of those games (Like Expression 2 in Garry's Mod). 
             <br>
@@ -72,10 +71,18 @@
             </small>
         </h1>
 
-        <div class="container-fluid">
-            <img src="assets/images/IMG_4892.jpg" class="rounded mx-auto d-block" height="386px" width="289.5px"/>
+        <!-- This is the card containing my face and email info -->
+        
+        <div class="container-fluid d-flex justify-content-center align-items-center">
+            <div class="card text-center" style="width: 18rem;">
+                <img src="assets/images/IMG_4892.jpg" class="card-img-top" height="386px" width="289.5px"/>
+                <div class="card-body" style="background-color: lightgrey;">
+                    <h5 class="card-title">Get In Contact</h5>
+                    <p class="card-text">If you'd like to get in contact with me, please click the button down below :)</p>
+                    <a href="mailto:garrettgame72@gmail.com" target="_blank" class="btn btn-primary">Email Me</a>
+                </div>
+            </div>
         </div>
-
         <hr>
     </div>
 
@@ -122,9 +129,18 @@
         </div>
     </div>
 
+    
+    <!-- This is the clock at the bottom of the page :) -->
+    <div class="container">
+        <p class="text-light text-center" id="clock">Loading Time...</p>
+        
+        <p class="text-light text-center" id="year">Loading Date...</p>
+    </div>
 
 
-    <!-- Optional JavaScript -->
+    <!-- My personal javascript -->
+    <script src="js/currenttime.js"></script>
+    <script src="js/currentyear.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

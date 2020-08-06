@@ -32,5 +32,21 @@ a:hover{
 }
 
 .modalstyle{
-    margin-bottom: 25px;
+    margin-bottom: 10px;
+}
+
+#clock{
+    margin: 0px;
+}
+
+#year{
+    padding-bottom: 10px;
+}
+
+.yesDone{
+    color: greenyellow;
+}
+
+.wipDone{
+    color: aqua;
 }

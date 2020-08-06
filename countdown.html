@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <!-- My Personal CSS Link -->
         <link rel="stylesheet" href="css/styles.css"/>
+        <link rel="stylesheet" href="css/timer.css"/>
         <!-- Logo / Icons Import -->
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
@@ -22,7 +23,11 @@
 
         <!-- The onLoad element in the body tag loads the clock (displayed at the bottom of the screen) and updates it (makes it run again) every 1000 milliseconds (1 second) -->
         <body>
-
+            <script>
+                $(document).ready(function(){
+                    $('[data-toggle="tooltip"]').tooltip();   
+                });
+                </script>
             <!--This is the NAVIGATION BAR -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand" href="index.html" style="padding-bottom: 7px;">
@@ -34,8 +39,8 @@
             
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">About Me </a>
@@ -43,14 +48,14 @@
                         <li class="nav-item">
                             <a class="nav-link" href="https://github.com/desura72/desura72.github.io" target="_blank">Github</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown active">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Project List
                             </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="parallax.html">Parallax</a>
                             <a class="dropdown-item" href="largeclock.html">Large Clock</a>
-                            <a class="dropdown-item" href="countdown.html">Countdown Timer</a>
+                            <a class="dropdown-item active" href="countdown.html">Countdown Timer <span class="sr-only">(current)</span></a>
                         </div>
                         </li>
                     </ul>
@@ -59,85 +64,31 @@
             <!-- This is the END of the Navigation Bar -->
 
             <!--This is the beginning of the main container, containing headers and paragraphs, tables, etc -->
-            <div class="container-fluid">
-
-                <h1 class="text-center" id="scriptGoodX"></h1>
-                <h1 class="text-center">
-                    This is my personal project site. <br>
-                    <small class="text-muted">Featuring all of my little side projects (listed at the top under Project List)</small>
-                </h1>
-
-                <hr>
-
-                <!--Intro Container-->
-                <div class="container customcontainer">
-                    <p class="text-center font-weight-bold text-light">On this website, my goal is to show off what I've learned.</p>
-                    <p class="text-center font-weight-bold text-light">I've done a lot of work, both in class and outside of class to learn more and more about Web Development.</p>
-                    <p class="text-center font-weight-bold text-light">One of the things I've done in my off time is to try to learn and understand <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> and it's intricacies.</p>
-                    <p class="text-center text-light font-weight-lighter">I will be using Bootstrap and my own personal CSS Sheets throughout this webpage.</p>
-                </div>
-
-                <!--Intro To Project Table-->
-                <div class="container-sm customcontainer text-light">
-
-                    <hr>
-
-                    <h4 class="text-center">
-                        Below is a list of the projects I am working on/have finished. 
-                        <br>
-                        <small class="text-muted">Feel free to check it out, with links to each project.</small>  
-                    </h4>
-
-                </div>
-
-                <!--Table Container-->
-                <div class="container">
-                    <table class="table table-bordered table-dark table-hover">
-
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Project Name</th>
-                                <th scope="col">Description</th>
-                                <th scope="col">Finished</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>This Website!</td>
-                                <td>The URL you're currently at!</td>
-                                <td class="wipDone">WIP</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td><a href="parallax.html">Parallax Site</td>
-                                <td>Special scrolling technique where background images move slower than foreground images.</td>
-                                <td class="yesDone">Yes!</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Live Clock</td>
-                                <td>Shows the time and date (located at the bottom of this page) and updates every second.</td>
-                                <td class="yesDone">Yes!</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td><a href="largeclock.html">Large Clock</a></td>
-                                <td>Shows the time in 5 columns, centered, and styled to look like one giant clock.</td>
-                                <td class="yesDone">Yes!</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td><a href="countdown.html">Timer</a></td>
-                                <td>Counts down from the number specified, and plays a "Ding!" sound at the end.</td>
-                                <td class="wipDone">WIP</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <hr>
-                </div>       
+            <div class="container-fluid text-center">
+                <form onkeydown="return event.key != 'Enter';">
+                    <p class="text-light">Enter a number to count down from: </p>
+                    <input 
+                        type="number" 
+                        id="numberInput" 
+                        value="10"
+                        formtarget="_self" 
+                        required 
+                        autofocus/>
+                    <br>
+                    <br>
+                    <h1 id="timer">Give me a number!</h1>
+                    <br>
+                    <p class="text-light">Adjust timer volume here:</p>
+                    <div class="slidecontainer">
+                        <input type="range" min="1" max="100" value="25" class="slider" id="myRange">
+                    </div>
+                    <p class="text-light">Value: <span id="outputnum"></span></p>
+                    <button onclick="clock();" type="button" data-toggle="tooltip" data-placement="top" title="Default tooltip" class="btn btn-lg btn-primary">Start Timer <br><span class="spansmall">Please don't click me while the timer is going, I'll break at the moment :(</span></button>
+                    <button onclick="clearInterval(myTimer)" type="button" class="btn btn-lg btn-danger">Stop Timer<br><span class="spansmall">Click me to stop the timer completely! Pause button coming soon :)</span></button>
+                </form>
+                <br>
             </div>
+
 
             <!-- Survey Text -->
             <div class="container text-center text-muted">
@@ -193,12 +144,13 @@
 
 
             <!-- My Personal Javascript -->
-            <script src="js/goodmorning.js"></script>
             <script src="js/currenttime.js"></script>
             <script src="js/currentyear.js"></script>
+            <script src="js/countdown.js"></script>
+            <script src="js/slideradjuster.js"></script>
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->
             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     </body>
 
